@@ -38,6 +38,7 @@ const Login = () => {
       const res = await apiService.login({email,password})
       localStorage.setItem('token', res.access_token)
       console.log(res.access_token)
+      navigate('patient-dashboard')
     }catch (error){
       console.error(error)
     }
